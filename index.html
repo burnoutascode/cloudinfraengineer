@@ -274,7 +274,79 @@
     .early-career-table td strong {
       color: var(--text-main);
     }
+/* Certifications Grid */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1rem;
+    }
 
+    .cert-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .cert-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .cert-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .cert-info {
+      flex: 1;
+    }
+
+    .cert-name {
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .cert-issuer {
+      font-family: var(--font-mono);
+      font-size: 0.775rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .cert-verify {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent-dim);
+      background: var(--accent-dim);
+      padding: 0.3rem 0.55rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      transition: background 0.2s ease;
+    }
+
+    .cert-verify:hover {
+      background: rgba(56, 189, 248, 0.25);
+    }
+
+    /* Print adjustment for certifications */
+    @media print {
+      .cert-card {
+        background: #fff;
+        border: 1px solid #ddd;
+      }
+      .cert-name { color: #000; }
+      .cert-verify { display: none; }
+    }
+    
     /* Footer */
     footer {
       text-align: center;
@@ -601,7 +673,7 @@
             <div class="cert-name">AWS Certified Cloud Practitioner</div>
             <div class="cert-issuer">AWS / Credly • Earned 2023</div>
           </div>
-          <a href="#" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
+          <a href="https://www.credly.com/badges/dc042a63-ec63-4e72-b26b-42c19fd042ef" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
         </div>
         
        <div class="cert-card">
@@ -610,7 +682,7 @@
             <div class="cert-name">A+ Certification</div>
             <div class="cert-issuer">CompTIA • Earned 2002</div>
           </div>
-          <a href="#" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
+          <a href="https://www.credly.com/badges/cabea30d-20f8-499e-8930-61519e33062c" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
         </div>
         
       </div>
