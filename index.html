@@ -3,20 +3,518 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cloud Infrastructure Engineer | Resume</title>
+  <title>Richard Condon | Cloud Infrastructure & Platform Engineer</title>
+  <meta name="description" content="Resume of Richard Condon: Cloud Engineer specializing in Azure, hybrid-cloud migration, network architecture, and infrastructure automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
-    h1 { margin-bottom: 0.2em; }
-    .subtitle { color: #555; margin-bottom: 2em; }
-    section { margin-bottom: 2em; }
+    :root {
+      --bg: #0b0f19;
+      --surface: #111827;
+      --surface-border: #1f2937;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-dim: rgba(56, 189, 248, 0.12);
+      --code-bg: #030712;
+      --tag-bg: #1e293b;
+      --tag-text: #cbd5e1;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2.5rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--surface-border);
+      padding-bottom: 1.5rem;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #ffffff;
+    }
+
+    .role-title {
+      font-family: var(--font-mono);
+      font-size: 1.05rem;
+      color: var(--accent);
+      margin-top: 0.25rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .contact-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Terminal card */
+    .terminal-card {
+      background-color: var(--code-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: #e2e8f0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .terminal-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 0.85rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+
+    .terminal-content span.prompt { color: var(--accent); }
+    .terminal-content span.key { color: #818cf8; }
+    .terminal-content span.str { color: #34d399; }
+
+    /* Section headings */
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #e5e7eb;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--surface-border);
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-category {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .skill-category h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.775rem;
+      font-family: var(--font-mono);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Experience & Projects */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.35rem;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .card-meta {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .card-subtitle {
+      font-size: 0.875rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    ul.bullet-list {
+      padding-left: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      color: var(--text-muted);
+      font-size: 0.925rem;
+    }
+
+    ul.bullet-list li strong {
+      color: var(--text-main);
+    }
+
+    /* Early career compact table */
+    .early-career-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+
+    .early-career-table th, 
+    .early-career-table td {
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--surface-border);
+    }
+
+    .early-career-table th {
+      color: var(--accent);
+      font-weight: 600;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .early-career-table td {
+      color: var(--text-muted);
+    }
+
+    .early-career-table td strong {
+      color: var(--text-main);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--surface-border);
+      padding-top: 1.5rem;
+      font-family: var(--font-mono);
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background-color: #fff;
+        color: #111;
+        padding: 0;
+      }
+      .terminal-card, .skill-category, .card {
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: none;
+      }
+      .tag {
+        background: #eee;
+        color: #333;
+        border: 1px solid #ccc;
+      }
+      h1, .card-title { color: #000; }
+      .role-title, .card-subtitle, .skill-category h3 { color: #0284c7; }
+      ul.bullet-list { color: #333; }
+      .early-career-table td, .early-career-table th { border-color: #ddd; color: #333; }
+      .early-career-table td strong { color: #000; }
+    }
   </style>
 </head>
 <body>
-  <h1>Richard Condon</h1>
-  <div class="subtitle">Cloud & Infrastructure Engineer</div>
-  <section>
-    <h2>About Me</h2>
-    <p>Infrastructure Engineer specializing in Cloud Networking, IaC/Terraform, and Platform Architecture.</p>
-  </section>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="header-top">
+        <div>
+          <h1>Richard Condon</h1>
+          <div class="role-title">$ whoami: Cloud Infrastructure & Platform Engineer</div>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:condonrv@gmail.com"><span>✉</span> condonrv@gmail.com</a>
+          <a href="https://linkedin.com/in/rvcondon" target="_blank" rel="noopener"><span>🔗</span> linkedin.com/in/rvcondon</a>
+          <a href="https://github.com/rvcondon" target="_blank" rel="noopener"><span>🐙</span> github.com/rvcondon</a>
+          <a href="https://cloudinfraengineer.com"><span>🌐</span> cloudinfraengineer.com</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Terminal Overview -->
+    <section class="terminal-card">
+      <div class="terminal-bar">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+      </div>
+      <div class="terminal-content">
+        <div><span class="prompt">terraform plan</span> -target=career.richard_condon</div>
+        <div style="margin-top: 0.5rem;">
+          <span class="key">Focus:</span> <span class="str">"Enterprise Cloud Migrations, Azure & Multi-Cloud, Hybrid Networking, IaC"</span><br>
+          <span class="key">Experience:</span> <span class="str">"24+ Years driving Data Center consolidations to modern Cloud Platforms"</span><br>
+          <span class="key">Key Strengths:</span> <span class="str">"IaaS Architecture, VeloCloud SD-WAN, Active Directory Migrations, PowerShell Automation"</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2>Core Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Cloud Platforms & Storage</h3>
+          <div class="tag-container">
+            <span class="tag">Microsoft Azure</span>
+            <span class="tag">Azure IaaS</span>
+            <span class="tag">NetApp Storage</span>
+            <span class="tag">Google Cloud (GCP)</span>
+            <span class="tag">AWS Basics</span>
+            <span class="tag">Cloudflare</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>IaC & Automation</h3>
+          <div class="tag-container">
+            <span class="tag">Terraform (HCL)</span>
+            <span class="tag">PowerShell</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">Bash Scripting</span>
+            <span class="tag">SQL Administration</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Networking & Architecture</h3>
+          <div class="tag-container">
+            <span class="tag">VeloCloud SD-WAN</span>
+            <span class="tag">LAN/WAN Engineering</span>
+            <span class="tag">VPC / VNet Architecture</span>
+            <span class="tag">FoIP (RightFax/Esker)</span>
+            <span class="tag">Data Center Migration</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Identity & Enterprise Platforms</h3>
+          <div class="tag-container">
+            <span class="tag">Active Directory</span>
+            <span class="tag">Microsoft Office 365</span>
+            <span class="tag">Exchange Server</span>
+            <span class="tag">IAM Least Privilege</span>
+            <span class="tag">Level III Escalation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="timeline">
+
+        <!-- Role 1 -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Cloud Engineer | Enterprise Platform Engineer IV</div>
+            <div class="card-meta">Jul 2022 — Present</div>
+          </div>
+          <div class="card-subtitle">Fidelity National Financial • Full-time</div>
+          <ul class="bullet-list">
+            <li>Architect and maintain enterprise cloud infrastructure focusing on scalability, security compliance, and continuous modernization across distributed operations.</li>
+            <li>Drive IaC and cloud deployment strategies, optimizing resource utilization and platform uptime for division workloads.</li>
+          </ul>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Cloud Systems Engineer | Azure Administrator – Northeast</div>
+            <div class="card-meta">Jan 2018 — Jul 2022</div>
+          </div>
+          <div class="card-subtitle">Fidelity National Financial • Rockaway, NJ</div>
+          <ul class="bullet-list">
+            <li><strong>Data Center Cloud Migration:</strong> Spearheaded the end-to-end migration of the on-premises regional data center into the Microsoft Azure cloud platform.</li>
+            <li><strong>Workload Consolidation:</strong> Consolidated multiple single-instance file, database, and application servers into Azure IaaS and NetApp Cloud Storage, replacing end-of-life physical hardware.</li>
+            <li><strong>Facility Decommissioning:</strong> Successfully decommissioned all server and network hardware across the on-premises facility, collapsing data center footprint and significantly reducing operational and facility overhead.</li>
+            <li><strong>Cloud Provisioning & Scalability:</strong> Provisioned scalable IaaS virtual machines and network topologies for net-new cloud compute deployments.</li>
+            <li><strong>SD-WAN Rollout:</strong> Led VeloCloud SD-WAN deployment across all regional division operations to optimize branch WAN connectivity.</li>
+            <li><strong>Financial Operations:</strong> Partnered with division leadership to manage cloud IT budget forecasting and infrastructure expenditures.</li>
+          </ul>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Systems Engineer | Data Center Server Lead</div>
+            <div class="card-meta">Jul 2010 — Jan 2018</div>
+          </div>
+          <div class="card-subtitle">Fidelity National Financial • Roseland, NJ</div>
+          <ul class="bullet-list">
+            <li><strong>Branch Server Consolidation:</strong> Acted as Lead Server Technician heading the consolidation of 150+ branch office servers into high-density regional footprints, saving thousands annually in licensing and hardware overhead.</li>
+            <li><strong>Office 365 Cloud Migration:</strong> Project Lead for Northeast & Mid-Atlantic region migrations from on-premises Exchange (2003/2007/2010) to Microsoft Office 365 (user, shared mailboxes, and public folders).</li>
+            <li><strong>Enterprise Network Operations:</strong> Served as Lead Network Technician responsible for LAN design, hardware refresh/replacements, and WAN escalation for regional data center operations.</li>
+            <li><strong>Data Center Oversight:</strong> Supervised 24/7 mission-critical operations, managed SQL-backed Help Desk reporting systems, and acted as the top Level III escalation engineer for regional executive contacts.</li>
+            <li><strong>Governance & Standards:</strong> Represented division interests on the Corporate Microsoft Deployment Committee and Enterprise Software Deployment Committee for Windows Server, Windows 10, and core business software releases.</li>
+            <li><strong>Telephony & Fax over IP:</strong> Managed enterprise FoIP systems including RightFax and EskerFax infrastructure.</li>
+          </ul>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Systems Analyst</div>
+            <div class="card-meta">Sep 2002 — Jul 2010</div>
+          </div>
+          <div class="card-subtitle">Fidelity National Financial • Roseland, NJ</div>
+          <ul class="bullet-list">
+            <li><strong>Active Directory Architecture & Migration:</strong> Consolidated multiple legacy Windows NT4 domains into unified Corporate Active Directory forests, standardizing user, computer, and service account objects across the Eastern region.</li>
+            <li><strong>Messaging Administration:</strong> Administered multi-site Exchange messaging systems, automating provisioning workflows with PowerShell and Exchange Management Console.</li>
+            <li><strong>Regional Systems Maintenance:</strong> Managed weekly maintenance and disaster recovery backups for 60+ regional servers, Windows 2000 Domain Controllers, Open-VMS VAX systems, and NAS appliances.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Early Career Foundations -->
+    <section>
+      <h2>Early Career History</h2>
+      <div class="card">
+        <table class="early-career-table">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Company</th>
+              <th>Period</th>
+              <th>Key Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Database Upgrade Tech</strong></td>
+              <td>Quest Diagnostics</td>
+              <td>2002</td>
+              <td>Remote patching of medical software, scripted DB backup & restore.</td>
+            </tr>
+            <tr>
+              <td><strong>Windows Migration Tech</strong></td>
+              <td>Siemens</td>
+              <td>2002</td>
+              <td>Enterprise OS upgrade, NT to Active Directory account migrations.</td>
+            </tr>
+            <tr>
+              <td><strong>Laptop Systems Tech</strong></td>
+              <td>Dendrite</td>
+              <td>2001</td>
+              <td>Nationwide rapid hardware staging, imaging, and QA deployments.</td>
+            </tr>
+            <tr>
+              <td><strong>Help Desk Analyst</strong></td>
+              <td>Datatec Systems</td>
+              <td>2001</td>
+              <td>Retail POS systems support, network diagrams, and technical documentation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <span>Hosted on Cloudflare Pages • Built with semantic HTML & CSS</span>
+    </footer>
+  </div>
+
 </body>
 </html>
