@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Richard Condon | Cloud Infrastructure & Platform Engineer</title>
-  <meta name="description" content="Resume of Richard Condon: Cloud Engineer specializing in Azure, hybrid-cloud migration, network architecture, and infrastructure automation.">
+  <meta name="description"
+    content="Resume of Richard Condon: Cloud Engineer specializing in Azure, hybrid-cloud migration, network architecture, and infrastructure automation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --bg: #0b0f19;
@@ -121,13 +125,29 @@
       border-radius: 50%;
     }
 
-    .dot-red { background: #ef4444; }
-    .dot-yellow { background: #f59e0b; }
-    .dot-green { background: #10b981; }
+    .dot-red {
+      background: #ef4444;
+    }
 
-    .terminal-content span.prompt { color: var(--accent); }
-    .terminal-content span.key { color: #818cf8; }
-    .terminal-content span.str { color: #34d399; }
+    .dot-yellow {
+      background: #f59e0b;
+    }
+
+    .dot-green {
+      background: #10b981;
+    }
+
+    .terminal-content span.prompt {
+      color: var(--accent);
+    }
+
+    .terminal-content span.key {
+      color: #818cf8;
+    }
+
+    .terminal-content span.str {
+      color: #34d399;
+    }
 
     /* Section headings */
     h2 {
@@ -252,7 +272,7 @@
       margin-top: 0.5rem;
     }
 
-    .early-career-table th, 
+    .early-career-table th,
     .early-career-table td {
       padding: 0.6rem 0.75rem;
       text-align: left;
@@ -274,10 +294,11 @@
     .early-career-table td strong {
       color: var(--text-main);
     }
-/* Certifications Grid */
+
+    /* Certifications Grid */
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1rem;
     }
 
@@ -285,7 +306,7 @@
       background: var(--surface);
       border: 1px solid var(--surface-border);
       border-radius: 8px;
-      padding: 1rem 1.25rem;
+      padding: 1.1rem 1.25rem;
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -297,8 +318,15 @@
       transform: translateY(-2px);
     }
 
-    .cert-icon {
-      font-size: 1.5rem;
+    .cert-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
       flex-shrink: 0;
     }
 
@@ -306,11 +334,19 @@
       flex: 1;
     }
 
-    .cert-name {
+    .cert-name-link {
       font-size: 0.925rem;
       font-weight: 600;
       color: #fff;
-      line-height: 1.3;
+      text-decoration: none;
+      line-height: 1.35;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+
+    .cert-name-link:hover {
+      color: var(--accent);
+      text-decoration: underline;
     }
 
     .cert-issuer {
@@ -327,7 +363,7 @@
       text-decoration: none;
       border: 1px solid var(--accent-dim);
       background: var(--accent-dim);
-      padding: 0.3rem 0.55rem;
+      padding: 0.35rem 0.6rem;
       border-radius: 4px;
       white-space: nowrap;
       transition: background 0.2s ease;
@@ -343,10 +379,22 @@
         background: #fff;
         border: 1px solid #ddd;
       }
-      .cert-name { color: #000; }
-      .cert-verify { display: none; }
+
+      .cert-badge {
+        background: #f3f4f6;
+        border: 1px solid #e5e7eb;
+      }
+
+      .cert-name-link {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .cert-verify {
+        display: none;
+      }
     }
-    
+
     /* Footer */
     footer {
       text-align: center;
@@ -364,24 +412,49 @@
         color: #111;
         padding: 0;
       }
-      .terminal-card, .skill-category, .card {
+
+      .terminal-card,
+      .skill-category,
+      .card {
         background: #fff;
         border: 1px solid #ddd;
         box-shadow: none;
       }
+
       .tag {
         background: #eee;
         color: #333;
         border: 1px solid #ccc;
       }
-      h1, .card-title { color: #000; }
-      .role-title, .card-subtitle, .skill-category h3 { color: #0284c7; }
-      ul.bullet-list { color: #333; }
-      .early-career-table td, .early-career-table th { border-color: #ddd; color: #333; }
-      .early-career-table td strong { color: #000; }
+
+      h1,
+      .card-title {
+        color: #000;
+      }
+
+      .role-title,
+      .card-subtitle,
+      .skill-category h3 {
+        color: #0284c7;
+      }
+
+      ul.bullet-list {
+        color: #333;
+      }
+
+      .early-career-table td,
+      .early-career-table th {
+        border-color: #ddd;
+        color: #333;
+      }
+
+      .early-career-table td strong {
+        color: #000;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
@@ -394,8 +467,10 @@
         </div>
         <div class="contact-links">
           <a href="mailto:burnoutascode@gmail.com"><span>✉</span> burnoutascode@gmail.com</a>
-          <a href="https://linkedin.com/in/rvcondon" target="_blank" rel="noopener"><span>🔗</span> linkedin.com/in/rvcondon</a>
-          <a href="https://github.com/burnoutascode" target="_blank" rel="noopener"><span>🐙</span> github.com/rvcondon</a>
+          <a href="https://linkedin.com/in/rvcondon" target="_blank" rel="noopener"><span>🔗</span>
+            linkedin.com/in/rvcondon</a>
+          <a href="https://github.com/burnoutascode" target="_blank" rel="noopener"><span>🐙</span>
+            github.com/rvcondon</a>
           <a href="https://cloudinfraengineer.com"><span>🌐</span> cloudinfraengineer.com</a>
         </div>
       </div>
@@ -411,9 +486,12 @@
       <div class="terminal-content">
         <div><span class="prompt">terraform plan</span> -target=career.richard_condon</div>
         <div style="margin-top: 0.5rem;">
-          <span class="key">Focus:</span> <span class="str">"Enterprise Cloud Migrations, Azure & Multi-Cloud, Hybrid Networking, IaC"</span><br>
-          <span class="key">Experience:</span> <span class="str">"24+ Years driving Data Center consolidations to modern Cloud Platforms"</span><br>
-          <span class="key">Key Strengths:</span> <span class="str">"IaaS Architecture, VeloCloud SD-WAN, Active Directory Migrations, PowerShell Automation"</span>
+          <span class="key">Focus:</span> <span class="str">"Enterprise Cloud Migrations, Azure & Multi-Cloud, Hybrid
+            Networking, IaC"</span><br>
+          <span class="key">Experience:</span> <span class="str">"24+ Years driving Data Center consolidations to modern
+            Cloud Platforms"</span><br>
+          <span class="key">Key Strengths:</span> <span class="str">"IaaS Architecture, VeloCloud SD-WAN, Active
+            Directory Migrations, PowerShell Automation"</span>
         </div>
       </div>
     </section>
@@ -483,8 +561,10 @@
           </div>
           <div class="card-subtitle">Fidelity National Financial • Full-time</div>
           <ul class="bullet-list">
-            <li>Architect and maintain enterprise cloud infrastructure focusing on scalability, security compliance, and continuous modernization across distributed operations.</li>
-            <li>Drive IaC and cloud deployment strategies, optimizing resource utilization and platform uptime for division workloads.</li>
+            <li>Architect and maintain enterprise cloud infrastructure focusing on scalability, security compliance, and
+              continuous modernization across distributed operations.</li>
+            <li>Drive IaC and cloud deployment strategies, optimizing resource utilization and platform uptime for
+              division workloads.</li>
           </ul>
         </div>
 
@@ -496,12 +576,20 @@
           </div>
           <div class="card-subtitle">Fidelity National Financial • Rockaway, NJ</div>
           <ul class="bullet-list">
-            <li><strong>Data Center Cloud Migration:</strong> Spearheaded the end-to-end migration of the on-premises regional data center into the Microsoft Azure cloud platform.</li>
-            <li><strong>Workload Consolidation:</strong> Consolidated multiple single-instance file, database, and application servers into Azure IaaS and NetApp Cloud Storage, replacing end-of-life physical hardware.</li>
-            <li><strong>Facility Decommissioning:</strong> Successfully decommissioned all server and network hardware across the on-premises facility, collapsing data center footprint and significantly reducing operational and facility overhead.</li>
-            <li><strong>Cloud Provisioning & Scalability:</strong> Provisioned scalable IaaS virtual machines and network topologies for net-new cloud compute deployments.</li>
-            <li><strong>SD-WAN Rollout:</strong> Led VeloCloud SD-WAN deployment across all regional division operations to optimize branch WAN connectivity.</li>
-            <li><strong>Financial Operations:</strong> Partnered with division leadership to manage cloud IT budget forecasting and infrastructure expenditures.</li>
+            <li><strong>Data Center Cloud Migration:</strong> Spearheaded the end-to-end migration of the on-premises
+              regional data center into the Microsoft Azure cloud platform.</li>
+            <li><strong>Workload Consolidation:</strong> Consolidated multiple single-instance file, database, and
+              application servers into Azure IaaS and NetApp Cloud Storage, replacing end-of-life physical hardware.
+            </li>
+            <li><strong>Facility Decommissioning:</strong> Successfully decommissioned all server and network hardware
+              across the on-premises facility, collapsing data center footprint and significantly reducing operational
+              and facility overhead.</li>
+            <li><strong>Cloud Provisioning & Scalability:</strong> Provisioned scalable IaaS virtual machines and
+              network topologies for net-new cloud compute deployments.</li>
+            <li><strong>SD-WAN Rollout:</strong> Led VeloCloud SD-WAN deployment across all regional division operations
+              to optimize branch WAN connectivity.</li>
+            <li><strong>Financial Operations:</strong> Partnered with division leadership to manage cloud IT budget
+              forecasting and infrastructure expenditures.</li>
           </ul>
         </div>
 
@@ -513,12 +601,22 @@
           </div>
           <div class="card-subtitle">Fidelity National Financial • Roseland, NJ</div>
           <ul class="bullet-list">
-            <li><strong>Branch Server Consolidation:</strong> Acted as Lead Server Technician heading the consolidation of 150+ branch office servers into high-density regional footprints, saving thousands annually in licensing and hardware overhead.</li>
-            <li><strong>Office 365 Cloud Migration:</strong> Project Lead for Northeast & Mid-Atlantic region migrations from on-premises Exchange (2003/2007/2010) to Microsoft Office 365 (user, shared mailboxes, and public folders).</li>
-            <li><strong>Enterprise Network Operations:</strong> Served as Lead Network Technician responsible for LAN design, hardware refresh/replacements, and WAN escalation for regional data center operations.</li>
-            <li><strong>Data Center Oversight:</strong> Supervised 24/7 mission-critical operations, managed SQL-backed Help Desk reporting systems, and acted as the top Level III escalation engineer for regional executive contacts.</li>
-            <li><strong>Governance & Standards:</strong> Represented division interests on the Corporate Microsoft Deployment Committee and Enterprise Software Deployment Committee for Windows Server, Windows 10, and core business software releases.</li>
-            <li><strong>Telephony & Fax over IP:</strong> Managed enterprise FoIP systems including RightFax and EskerFax infrastructure.</li>
+            <li><strong>Branch Server Consolidation:</strong> Acted as Lead Server Technician heading the consolidation
+              of 150+ branch office servers into high-density regional footprints, saving thousands annually in
+              licensing and hardware overhead.</li>
+            <li><strong>Office 365 Cloud Migration:</strong> Project Lead for Northeast & Mid-Atlantic region migrations
+              from on-premises Exchange (2003/2007/2010) to Microsoft Office 365 (user, shared mailboxes, and public
+              folders).</li>
+            <li><strong>Enterprise Network Operations:</strong> Served as Lead Network Technician responsible for LAN
+              design, hardware refresh/replacements, and WAN escalation for regional data center operations.</li>
+            <li><strong>Data Center Oversight:</strong> Supervised 24/7 mission-critical operations, managed SQL-backed
+              Help Desk reporting systems, and acted as the top Level III escalation engineer for regional executive
+              contacts.</li>
+            <li><strong>Governance & Standards:</strong> Represented division interests on the Corporate Microsoft
+              Deployment Committee and Enterprise Software Deployment Committee for Windows Server, Windows 10, and core
+              business software releases.</li>
+            <li><strong>Telephony & Fax over IP:</strong> Managed enterprise FoIP systems including RightFax and
+              EskerFax infrastructure.</li>
           </ul>
         </div>
 
@@ -530,9 +628,13 @@
           </div>
           <div class="card-subtitle">Fidelity National Financial • Roseland, NJ</div>
           <ul class="bullet-list">
-            <li><strong>Active Directory Architecture & Migration:</strong> Consolidated multiple legacy Windows NT4 domains into unified Corporate Active Directory forests, standardizing user, computer, and service account objects across the Eastern region.</li>
-            <li><strong>Messaging Administration:</strong> Administered multi-site Exchange messaging systems, automating provisioning workflows with PowerShell and Exchange Management Console.</li>
-            <li><strong>Regional Systems Maintenance:</strong> Managed weekly maintenance and disaster recovery backups for 60+ regional servers, Windows 2000 Domain Controllers, Open-VMS VAX systems, and NAS appliances.</li>
+            <li><strong>Active Directory Architecture & Migration:</strong> Consolidated multiple legacy Windows NT4
+              domains into unified Corporate Active Directory forests, standardizing user, computer, and service account
+              objects across the Eastern region.</li>
+            <li><strong>Messaging Administration:</strong> Administered multi-site Exchange messaging systems,
+              automating provisioning workflows with PowerShell and Exchange Management Console.</li>
+            <li><strong>Regional Systems Maintenance:</strong> Managed weekly maintenance and disaster recovery backups
+              for 60+ regional servers, Windows 2000 Domain Controllers, Open-VMS VAX systems, and NAS appliances.</li>
           </ul>
         </div>
 
@@ -581,103 +683,220 @@
         </table>
       </div>
     </section>
-<!-- Certifications & Credentials -->
+    <!-- Certifications & Credentials -->
     <section>
       <h2>Certifications & Credentials</h2>
       <div class="cert-grid">
-        
+
+        <!-- AZ-305: Azure Solutions Architect Expert -->
         <div class="cert-card">
-          <div class="cert-icon">🔷</div>
-          <div class="cert-info">
-            <div class="cert-name">Microsoft Certified: Azure Administrator Associate (AZ-104)</div>
-            <div class="cert-issuer">Microsoft • Credential ID: AZ-104</div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.05 4.24l-4.5 7.91h6.69l-3.3-6.14a1.05 1.05 0 00-1.89 0l-5.7 10.02A1.05 1.05 0 005.27 17.5h13.46a1.05 1.05 0 00.91-1.57l-4.83-8.48a1.05 1.05 0 00-1.76-.21z"
+                fill="#0078D4" />
+            </svg>
           </div>
-          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz?tab=credentials-tab" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
+          <div class="cert-info">
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/"
+              target="_blank" rel="noopener" class="cert-name-link">
+              Microsoft Certified: Azure Solutions Architect Expert
+            </a>
+            <div class="cert-issuer">Microsoft • Exam AZ-305</div>
+          </div>
+          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz" class="cert-verify"
+            target="_blank" rel="noopener">Verify ↗</a>
         </div>
 
+        <!-- AZ-700: Azure Network Engineer Associate -->
         <div class="cert-card">
-          <div class="cert-icon">🔷</div>
-          <div class="cert-info">
-            <div class="cert-name">Microsoft Certified: Azure Network Engineer Associate (AZ-700)</div>
-            <div class="cert-issuer">Microsoft • Credential ID: AZ-700</div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.05 4.24l-4.5 7.91h6.69l-3.3-6.14a1.05 1.05 0 00-1.89 0l-5.7 10.02A1.05 1.05 0 005.27 17.5h13.46a1.05 1.05 0 00.91-1.57l-4.83-8.48a1.05 1.05 0 00-1.76-.21z"
+                fill="#0078D4" />
+            </svg>
           </div>
-          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz?tab=credentials-tab" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
-        </div>
-        
-        <div class="cert-card">
-          <div class="cert-icon">🔷</div>
           <div class="cert-info">
-            <div class="cert-name">Microsoft Certified: Azure Solutions Architect Expert (AZ-305)</div>
-            <div class="cert-issuer">Microsoft • Credential ID: AZ-305</div>
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-network-engineer-associate/"
+              target="_blank" rel="noopener" class="cert-name-link">
+              Microsoft Certified: Azure Network Engineer Associate
+            </a>
+            <div class="cert-issuer">Microsoft • Exam AZ-700</div>
           </div>
-          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz?tab=credentials-tab" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
+          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz" class="cert-verify"
+            target="_blank" rel="noopener">Verify ↗</a>
         </div>
 
+        <!-- AZ-104: Azure Administrator Associate -->
         <div class="cert-card">
-          <div class="cert-icon">🔷</div>
-          <div class="cert-info">
-            <div class="cert-name">Microsoft Certified: Identity and Access Administrator Associate (SC-300)</div>
-            <div class="cert-issuer">Microsoft • Credential ID: SC-300</div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.05 4.24l-4.5 7.91h6.69l-3.3-6.14a1.05 1.05 0 00-1.89 0l-5.7 10.02A1.05 1.05 0 005.27 17.5h13.46a1.05 1.05 0 00.91-1.57l-4.83-8.48a1.05 1.05 0 00-1.76-.21z"
+                fill="#0078D4" />
+            </svg>
           </div>
-          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz?tab=credentials-tab" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
+          <div class="cert-info">
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/" target="_blank"
+              rel="noopener" class="cert-name-link">
+              Microsoft Certified: Azure Administrator Associate
+            </a>
+            <div class="cert-issuer">Microsoft • Exam AZ-104</div>
+          </div>
+          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz" class="cert-verify"
+            target="_blank" rel="noopener">Verify ↗</a>
         </div>
 
+        <!-- AZ-140: Azure Virtual Desktop Specialty -->
         <div class="cert-card">
-          <div class="cert-icon">🔷</div>
-          <div class="cert-info">
-            <div class="cert-name">Microsoft® Certified Solutions Associate: Cloud Platform (MCSA)</div>
-            <div class="cert-issuer">Microsoft • Credential ID: MCSA: Cloud Platform - Certified 2018</div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.05 4.24l-4.5 7.91h6.69l-3.3-6.14a1.05 1.05 0 00-1.89 0l-5.7 10.02A1.05 1.05 0 005.27 17.5h13.46a1.05 1.05 0 00.91-1.57l-4.83-8.48a1.05 1.05 0 00-1.76-.21z"
+                fill="#0078D4" />
+            </svg>
           </div>
-          <a href="https://www.credly.com/badges/593a46de-1e65-4eb2-a89a-26105f9721e7/public_url" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
-        </div>
-               
-        <div class="cert-card">
-          <div class="cert-icon">🔷</div>
           <div class="cert-info">
-            <div class="cert-name">Microsoft Certified: Azure Fundamentals (AZ-900)</div>
-            <div class="cert-issuer">Microsoft • Credential ID: AZ-900</div>
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-virtual-desktop-specialty/"
+              target="_blank" rel="noopener" class="cert-name-link">
+              Microsoft Certified: Azure Virtual Desktop Specialty
+            </a>
+            <div class="cert-issuer">Microsoft • Exam AZ-140</div>
           </div>
-          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz?tab=credentials-tab" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
+          <a href="https://learn.microsoft.com/en-us/users/rvcondon/credentials" class="cert-verify" target="_blank"
+            rel="noopener">Verify ↗</a>
         </div>
 
+        <!-- SC-300: Identity and Access Administrator Associate -->
         <div class="cert-card">
-          <div class="cert-icon">🔷</div>
-          <div class="cert-info">
-            <div class="cert-name">Microsoft Certified: Azure AI Fundamentals (AI-900)</div>
-            <div class="cert-issuer">Microsoft • Credential ID: AI-900</div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm0 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+                fill="#0078D4" />
+            </svg>
           </div>
-          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz?tab=credentials-tab" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
-        </div>
-        
-        <div class="cert-card">
-          <div class="cert-icon">🔷</div>
           <div class="cert-info">
-            <div class="cert-name">Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)</div>
-            <div class="cert-issuer">Microsoft • Credential ID: SC-900</div>
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/"
+              target="_blank" rel="noopener" class="cert-name-link">
+              Microsoft Certified: Identity and Access Administrator
+            </a>
+            <div class="cert-issuer">Microsoft • Exam SC-300</div>
           </div>
-          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz?tab=credentials-tab" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
+          <a href="https://learn.microsoft.com/en-us/users/rvcondon/transcript/dg1n1h80nzm5wkz" class="cert-verify"
+            target="_blank" rel="noopener">Verify ↗</a>
         </div>
 
+        <!-- AZ-900: Azure Fundamentals -->
         <div class="cert-card">
-          <div class="cert-icon">⚙️</div>
-          <div class="cert-info">
-            <div class="cert-name">AWS Certified Cloud Practitioner</div>
-            <div class="cert-issuer">AWS / Credly • Earned 2023</div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.05 4.24l-4.5 7.91h6.69l-3.3-6.14a1.05 1.05 0 00-1.89 0l-5.7 10.02A1.05 1.05 0 005.27 17.5h13.46a1.05 1.05 0 00.91-1.57l-4.83-8.48a1.05 1.05 0 00-1.76-.21z"
+                fill="#0078D4" />
+            </svg>
           </div>
-          <a href="https://www.credly.com/badges/dc042a63-ec63-4e72-b26b-42c19fd042ef" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
-        </div>
-        
-       <div class="cert-card">
-          <div class="cert-icon">☁️</div>
           <div class="cert-info">
-            <div class="cert-name">A+ Certification</div>
-            <div class="cert-issuer">CompTIA • Earned 2002</div>
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/" target="_blank"
+              rel="noopener" class="cert-name-link">
+              Microsoft Certified: Azure Fundamentals
+            </a>
+            <div class="cert-issuer">Microsoft • Exam AZ-900</div>
           </div>
-          <a href="https://www.credly.com/badges/cabea30d-20f8-499e-8930-61519e33062c" class="cert-verify" target="_blank" rel="noopener">Verify ↗</a>
+          <a href="https://www.credly.com/badges/0dd81072-f69e-44b8-b87c-22660d8969d4" class="cert-verify"
+            target="_blank" rel="noopener">Verify ↗</a>
         </div>
-        
+
+        <!-- AI-900: Azure AI Fundamentals -->
+        <div class="cert-card">
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2a4 4 0 014 4c0 1.5-.8 2.8-2 3.5V11h2a3 3 0 013 3v1.1c1.2.7 2 2 2 3.5a4 4 0 11-8 0c0-1.5.8-2.8 2-3.5V14a1 1 0 00-1-1h-2a1 1 0 00-1 1v1.1c1.2.7 2 2 2 3.5a4 4 0 11-8 0c0-1.5.8-2.8 2-3.5V14a3 3 0 013-3h2V9.5C9.8 8.8 9 7.5 9 6a4 4 0 014-4z"
+                fill="#0078D4" />
+            </svg>
+          </div>
+          <div class="cert-info">
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
+              target="_blank" rel="noopener" class="cert-name-link">
+              Microsoft Certified: Azure AI Fundamentals
+            </a>
+            <div class="cert-issuer">Microsoft • Exam AI-900</div>
+          </div>
+          <a href="https://www.credly.com/badges/d39f13ea-3ee1-4a3a-a5f5-7e01ec0b4e1d" class="cert-verify"
+            target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+
+        <!-- SC-900: Security, Compliance, and Identity Fundamentals -->
+        <div class="cert-card">
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1 14l-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z"
+                fill="#0078D4" />
+            </svg>
+          </div>
+          <div class="cert-info">
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/security-compliance-and-identity-fundamentals/"
+              target="_blank" rel="noopener" class="cert-name-link">
+              Security, Compliance, & Identity Fundamentals
+            </a>
+            <div class="cert-issuer">Microsoft • Exam SC-900</div>
+          </div>
+          <a href="https://www.credly.com/badges/635333c1-4103-4d4b-bd51-69da69974f62" class="cert-verify"
+            target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+
+        <!-- AWS Certified Cloud Practitioner -->
+        <div class="cert-card">
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.8 14.04c-.37-.47-1.12-.27-1.57-.1-1.93.75-4.14 1.15-6.4 1.15-3.35 0-6.41-.93-8.86-2.52-.33-.21-.8-.18-1.02.14-.23.33-.14.77.19.98 2.68 1.74 5.99 2.76 9.69 2.76 2.45 0 4.86-.44 6.94-1.26.47-.18.79-.62.59-1.06-.06-.15-.14-.29-.26-.39z"
+                fill="#FF9900" />
+              <path
+                d="M19.97 12.35c-.19-.24-.55-.26-.78-.06l-1.92 1.63c-.22.19-.23.53-.04.74.09.11.23.17.38.17.13 0 .26-.05.35-.14l1.49-1.27.48 1.89c.07.28.35.45.63.38.28-.07.45-.35.38-.63l-.68-2.67c-.05-.2-.18-.35-.37-.42-.04-.02-.08-.02-.12-.02z"
+                fill="#FF9900" />
+              <path
+                d="M12 3C6.48 3 2 7.48 2 13s4.48 10 10 10 10-4.48 10-10S17.52 3 12 3zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                fill="#232F3E" />
+            </svg>
+          </div>
+          <div class="cert-info">
+            <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank" rel="noopener"
+              class="cert-name-link">
+              AWS Certified Cloud Practitioner (CLF-C02)
+            </a>
+            <div class="cert-issuer">Amazon Web Services • Credly Verified</div>
+          </div>
+          <a href="https://www.credly.com/badges/dc042a63-ec63-4e72-b26b-42c19fd042ef" class="cert-verify"
+            target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+
+        <!-- CompTIA A+ -->
+        <div class="cert-card">
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="24" height="24" rx="4" fill="#C8102E" />
+              <path
+                d="M6 16.5l3.6-9h2.3l3.6 9h-2.1l-.8-2.2H9.4l-.8 2.2H6zm3.9-3.9h2.2L11 8.7h-.1l-1 3.9zm8.1-1.1h1.5v1.4h-1.5v1.6h-1.4v-1.6h-1.6v-1.4h1.6V9.9h1.4v1.6z"
+                fill="#FFFFFF" />
+            </svg>
+          </div>
+          <div class="cert-info">
+            <a href="https://www.comptia.org/certifications/a" target="_blank" rel="noopener" class="cert-name-link">
+              CompTIA A+ ce Certified
+            </a>
+            <div class="cert-issuer">CompTIA • Core Systems & Hardware</div>
+          </div>
+          <a href="https://www.credly.com/badges/cabea30d-20f8-499e-8930-61519e33062c" class="cert-verify"
+            target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+
       </div>
     </section>
+
     <!-- Footer -->
     <footer>
       <span>Hosted on Cloudflare Pages • Built with semantic HTML & CSS</span>
@@ -685,4 +904,5 @@
   </div>
 
 </body>
+
 </html>
